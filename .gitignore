@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+backend/db.sqlite3
+backend/staticfiles/
+backend/ml_models/*.pkl
+backend/ml_models/model_meta.json
+.venv/
+node_modules/
+frontend/dist/

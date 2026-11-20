@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* RDB brand colours from the approved prototype (rdbGreen, rdbDark, rdbGold, rdbRed). */
+@theme {
+  --color-rdb-green: #007a33;
+  --color-rdb-dark: #0a2540;
+  --color-rdb-gold: #f39c12;
+  --color-rdb-red: #e74c3c;
+}
+
+/* Tailwind v4 compatibility: keep v3 defaults the prototype relied on. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}

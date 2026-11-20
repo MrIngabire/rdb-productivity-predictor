@@ -1,0 +1,14 @@
+# Optional: PostgreSQL for local development (the book's target database).
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: rdb_predictor
+      POSTGRES_USER: rdb
+      POSTGRES_PASSWORD: rdb_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
